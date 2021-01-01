@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+.hexGrid {
+    background: red;
+}
+
+text {
+    transition: 500ms;
+    animation: hideshow 10s 1.5s ease infinite;
+}
+
+svg {
+    pointer-events: none;
+}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import HexagonGrid from './react-hexagon-grid'
+import HexagonGrid from '../src/HexagonGrid';
 import times from 'lodash/times';
-import useWindowDimensions from './hooks/useWindowDimensions';
+import useWindowDimensions from '../src/hooks/useWindowDimensions';
 
 const HexGridDemo = () =>  {
   const getHexProps = (hexagon) => {
@@ -22,11 +22,11 @@ const HexGridDemo = () =>  {
       <text
         x="50%"
         y="50%"
-        fontSize={100}
-        fontWeight="lighter"
-        style={{ fill: 'blue' }}
+        fontSize={150}
+        fontWeight="bold"
+        style={{ fill: 'black' }}
         textAnchor="middle"
-      >
+        >
         {hexagon}
       </text>
     );
@@ -36,7 +36,7 @@ const HexGridDemo = () =>  {
 
   return (
     <HexagonGrid
-    gridWidth={width}
+    gridWidth={width-20}
     gridHeight={height}
     hexagons={hexagons}
     hexProps={getHexProps}
